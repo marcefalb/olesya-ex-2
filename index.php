@@ -1,5 +1,5 @@
 <?php
-require 'boot.php';
+require __DIR__.'/boot.php';
 
 if (!isset($_SESSION['is_auth'])) {
     header('Location: login.php');

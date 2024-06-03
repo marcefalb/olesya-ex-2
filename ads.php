@@ -1,5 +1,5 @@
 <?php
-require 'boot.php';
+require __DIR__.'/boot.php';
 
 header('Content-Type: application/json');
 

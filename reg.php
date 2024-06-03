@@ -1,5 +1,5 @@
 <?php
-require 'boot.php';
+require __DIR__.'/boot.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute(['username' => $username]);
     if ($stmt->rowCount() > 0) {
         flash('Это имя пользователя уже занято.');
-        header('Location: register.php');
+        header('Location: reg.php');
         exit;
     }
 

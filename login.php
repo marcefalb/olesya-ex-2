@@ -1,5 +1,5 @@
 <?php
-require 'boot.php';
+require __DIR__.'/boot.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
