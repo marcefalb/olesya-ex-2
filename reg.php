@@ -5,7 +5,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Проверим, не занято ли имя пользователя
     $stmt = pdo()->prepare("SELECT * FROM users WHERE login = :username");
     $stmt->execute(['username' => $username]);
     if ($stmt->rowCount() > 0) {
@@ -14,7 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // Добавим пользователя в базу
     $stmt = pdo()->prepare("INSERT INTO users (login, password) VALUES (:username, :password)");
     $stmt->execute([
         'username' => $username,
