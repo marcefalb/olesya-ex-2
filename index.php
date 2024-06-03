@@ -16,8 +16,8 @@ if (!isset($_SESSION['is_auth'])) {
     <h1>Объявления</h1>
     <a href="logout.php">Выйти</a>
     <form id="adForm" method="POST" action="post_ad.php">
-        <label for="adText">Новое объявление:</label>
-        <textarea name="ad_text" id="adText" required></textarea>
+        <label for="text">Новое объявление:</label>
+        <textarea name="ad_text" id="text" required style="display: block !important;"></textarea>
         <button type="submit">Опубликовать</button>
     </form>
     <div id="ads"></div>
