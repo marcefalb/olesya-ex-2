@@ -34,7 +34,7 @@ if (!isset($_SESSION['is_auth'])) {
                 if (data.success) {
                     const adsDiv = document.getElementById('ads');
                     const newAd = document.createElement('div');
-                    newAd.textContent = data.ad_text;
+                    newAd.textContent =  data.ad_text;
                     adsDiv.appendChild(newAd);
                     this.reset();
                 } else {
