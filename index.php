@@ -1,5 +1,5 @@
 <?php
-include 'boot.php';
+require 'boot.php';
 
 if (!isset($_SESSION['is_auth'])) {
     header('Location: login.php');
